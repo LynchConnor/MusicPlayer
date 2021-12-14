@@ -163,11 +163,13 @@ struct MusicCellView: View {
                         .resizable()
                         .frame(width: 50, height: 50, alignment: .center)
                         .foregroundColor(.white)
+                        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 0)
                 }else{
                     Image(systemName: "play.circle")
                         .resizable()
                         .frame(width: 50, height: 50, alignment: .center)
                         .foregroundColor(.white)
+                        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 0)
                 }
                 
                 

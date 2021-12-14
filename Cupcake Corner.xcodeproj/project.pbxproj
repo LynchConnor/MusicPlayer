@@ -37,7 +37,7 @@
 		E042E40E276800B50059EBC8 = {
 			isa = PBXGroup;
 			children = (
-				E042E419276800B50059EBC8 /* MusicPlayer */,
+				E042E419276800B50059EBC8 /* Cupcake Corner */,
 				E042E418276800B50059EBC8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,7 +50,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E042E419276800B50059EBC8 /* MusicPlayer */ = {
+		E042E419276800B50059EBC8 /* Cupcake Corner */ = {
 			isa = PBXGroup;
 			children = (
 				E042E41A276800B50059EBC8 /* MusicPlayerApp.swift */,
@@ -59,7 +59,7 @@
 				E042E41E276800B60059EBC8 /* Assets.xcassets */,
 				E042E420276800B60059EBC8 /* Preview Content */,
 			);
-			path = MusicPlayer;
+			path = "Cupcake Corner";
 			sourceTree = "<group>";
 		};
 		E042E420276800B60059EBC8 /* Preview Content */ = {
