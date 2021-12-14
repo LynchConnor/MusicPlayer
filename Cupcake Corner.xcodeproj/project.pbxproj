@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E042E41B276800B50059EBC8 /* Cupcake_CornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E042E41A276800B50059EBC8 /* Cupcake_CornerApp.swift */; };
+		E042E41B276800B50059EBC8 /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E042E41A276800B50059EBC8 /* MusicPlayerApp.swift */; };
 		E042E41D276800B50059EBC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E042E41C276800B50059EBC8 /* ContentView.swift */; };
 		E042E41F276800B60059EBC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E042E41E276800B60059EBC8 /* Assets.xcassets */; };
 		E042E422276800B60059EBC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E042E421276800B60059EBC8 /* Preview Assets.xcassets */; };
+		E042E42A27680C440059EBC8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E042E42927680C440059EBC8 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E042E417276800B50059EBC8 /* Cupcake Corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cupcake Corner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E042E41A276800B50059EBC8 /* Cupcake_CornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cupcake_CornerApp.swift; sourceTree = "<group>"; };
+		E042E41A276800B50059EBC8 /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
 		E042E41C276800B50059EBC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E042E41E276800B60059EBC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E042E421276800B60059EBC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E042E42927680C440059EBC8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +37,7 @@
 		E042E40E276800B50059EBC8 = {
 			isa = PBXGroup;
 			children = (
-				E042E419276800B50059EBC8 /* Cupcake Corner */,
+				E042E419276800B50059EBC8 /* MusicPlayer */,
 				E042E418276800B50059EBC8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +50,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E042E419276800B50059EBC8 /* Cupcake Corner */ = {
+		E042E419276800B50059EBC8 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				E042E41A276800B50059EBC8 /* Cupcake_CornerApp.swift */,
+				E042E41A276800B50059EBC8 /* MusicPlayerApp.swift */,
 				E042E41C276800B50059EBC8 /* ContentView.swift */,
+				E042E42827680C3B0059EBC8 /* Model */,
 				E042E41E276800B60059EBC8 /* Assets.xcassets */,
 				E042E420276800B60059EBC8 /* Preview Content */,
 			);
-			path = "Cupcake Corner";
+			path = MusicPlayer;
 			sourceTree = "<group>";
 		};
 		E042E420276800B60059EBC8 /* Preview Content */ = {
@@ -65,6 +68,14 @@
 				E042E421276800B60059EBC8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E042E42827680C3B0059EBC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E042E42927680C440059EBC8 /* Result.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E042E42A27680C440059EBC8 /* Result.swift in Sources */,
 				E042E41D276800B50059EBC8 /* ContentView.swift in Sources */,
-				E042E41B276800B50059EBC8 /* Cupcake_CornerApp.swift in Sources */,
+				E042E41B276800B50059EBC8 /* MusicPlayerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

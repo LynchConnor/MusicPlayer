@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Cupcake_CornerApp: App {
+struct MusicPlayerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
