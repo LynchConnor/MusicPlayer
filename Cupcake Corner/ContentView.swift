@@ -67,19 +67,33 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            
-            TextField("Artist", text: $viewModel.searchArtist)
-            
-            Button {
-                Task {
-                    await viewModel.fetchData()
+            HStack(spacing: 0) {
+                TextField("Artist", text: $viewModel.searchArtist)
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.gray.opacity(0.1))
+                    .padding([.vertical, .leading], 10)
+                
+                Button {
+                    Task {
+                        await viewModel.fetchData()
+                    }
+                } label: {
+                    Text("Search")
                 }
-            } label: {
-                Text("Fetch Data")
+                .padding(10)
+                .padding(.horizontal, 15)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .padding(.trailing, 10)
             }
 
             
             TextField("Song", text: $viewModel.searchText)
+                .padding(10)
+                .background(Color.gray.opacity(0.1))
+                .padding(5)
+                .padding(.horizontal, 10)
             
             List{
                 ForEach(viewModel.filteredItems.isEmpty ? viewModel.results : viewModel.filteredItems) { track in
@@ -103,6 +117,8 @@ struct ContentView_Previews: PreviewProvider {
 extension MusicCellView {
     class ViewModel: ObservableObject {
         
+        @Published var duration: Double = 0.0
+        
         @ObservedObject var contentViewModel = ContentView.ViewModel()
         
         @Published var songURL: String?
@@ -111,7 +127,6 @@ extension MusicCellView {
         init(track: ResultViewModel){
             self.track = track
         }
-        
         
         func setSongURL(_ url: String){
             self.songURL = url
@@ -134,7 +149,7 @@ struct MusicCellView: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text(viewModel.track.trackName)
                     .font(.headline)
                 Text(viewModel.track.collectionName)
@@ -146,17 +161,21 @@ struct MusicCellView: View {
             
             ZStack {
                 
-                AsyncImage(url: URL(string: viewModel.track.image)) { phase in
-                    if let img = phase.image {
-                        img.resizable().scaledToFill()
-                    }else if phase.error != nil {
-                        Text("There was an error loading the image.")
-                    } else {
-                        ProgressView()
+                ZStack {
+                    
+                    AsyncImage(url: URL(string: viewModel.track.image)) { phase in
+                        if let img = phase.image {
+                            img.resizable().scaledToFill()
+                        }else if phase.error != nil {
+                            Text("There was an error loading the image.")
+                        } else {
+                            ProgressView()
+                        }
                     }
+                    .cornerRadius(5)
                 }
                 .frame(width: 100, height: 100)
-                .cornerRadius(5)
+                .padding(5)
                 
                 if viewModel.track.isPlaying {
                     Image(systemName: "pause.circle")
